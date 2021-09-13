@@ -70,7 +70,7 @@ namespace Clipper
                             build.OnProgress += (sender, vidArgs) =>
                             {
                                 var percent = (int)(Math.Round(vidArgs.Duration.TotalSeconds / vidArgs.TotalLength.TotalSeconds, 2) * 100);
-                                Console.Title = $"[~] Processing stream cut number {part + 1} | [{vidArgs.Duration} / {vidArgs.TotalLength}] {percent}% ETA";
+                                Console.Title = $"[~] Processing stream cut number {part} | [{vidArgs.Duration} / {vidArgs.TotalLength}] {percent}% ETA";
                                 Task.Delay(1000);
                             };
                             await build.Start();
